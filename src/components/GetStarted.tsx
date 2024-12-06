@@ -5,7 +5,7 @@ import Image from "next/image";
 const GetStarted = () => {
     return (
         <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full border-4 border-gradient-to-r 
-        from-white to-[#5CE1E6] cursor-pointer p-[2px] border-[#5CE1E6] mr-12`}>
+        from-white to-[#5CE1E6] cursor-pointer p-[2px] border-[#5CE1E6] md:mr-24 sm:block hidden`}>
             <div className="flex justify-center items-center bg-primary flex-col w-[100%] h-[100%] rounded-full 
             border-gradient-to-r from-white to-[#5CE1E6]">
                 <div className="flex justify-center items-start flex-row">

@@ -5,9 +5,10 @@ import { useState } from "react";
 import Menus from "./Menus";
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState<boolean>(false);
+    const [toggle, setToggle] = useState<boolean>(true);
 
-    const handleToggle = () => setToggle((prev) => !prev)
+    const handleToggle = () => setToggle((prev) => !prev);
+    console.log("toggle", toggle);
 
     return (
         <nav className="w-full py-6 flex justify-between items-center navbar">
@@ -19,10 +20,10 @@ const Navbar = () => {
             </ul>
             <div className="list-none sm:hidden flex flex-1 justify-end items-center">
                 <Image src={toggle ? "/icons/close.svg" : "/icons/menu.svg"} className="object-contain"
-                    alt="menu" height={20} width={25} onClick={() => setToggle((prev) => !prev)} />
+                    alt="menu" height={20} width={25} onClick={handleToggle} />
             </div>
             <div
-                className={`absolute top-20 right-0 h-[calc(100vh-82px)] w-[40%] bg-primary text-white flex flex-col 
+                className={`absolute top-20 right-0 h-[100%] w-[40%] bg-primary text-white flex flex-col 
                     items-start p-6 transform ${toggle ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 sm:hidden`}
             >
                 <ul className="list-none flex flex-col gap-4">
