@@ -1,39 +1,58 @@
 "use client";
-import Image from "next/image";
-import { navLinks, logo } from "../constants";
+import { navLinks } from "../constants";
 import { useState } from "react";
 import Menus from "./Menus";
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState<boolean>(true);
-
-    const handleToggle = () => setToggle((prev) => !prev);
-    console.log("toggle", toggle);
+    const [active, setActive] = useState("Home");
+    const [toggle, setToggle] = useState(false);
 
     return (
-        <nav className="w-full py-6 flex justify-between items-center navbar">
-            <Image src={logo} alt="hoobank" width={124} height={32} />
-            <ul className="list-none sm:flex hidden justify-end items-center gap-6">
-                {navLinks.map((nav) => (
-                    <Menus key={nav.id} title={nav.title} />
+        <nav className="w-full flex py-6 justify-between items-center navbar">
+            <img src={"/icons/logo.svg"} alt="hoobank" className="w-[124px] h-[32px]" />
+
+            <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+                {navLinks.map((nav, index) => (
+                    <li
+                        key={nav.id}
+                        className={`font-poppins font-normal cursor-pointer text-[16px] 
+                            ${active === nav.title ? "text-white" : "text-dimWhite"} 
+                            ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+                        onClick={() => setActive(nav.title)}
+                    >
+                        <a href={`#${nav.id}`}>{nav.title}</a>
+                    </li>
                 ))}
             </ul>
-            <div className="list-none sm:hidden flex flex-1 justify-end items-center">
-                <Image src={toggle ? "/icons/close.svg" : "/icons/menu.svg"} className="object-contain"
-                    alt="menu" height={20} width={25} onClick={handleToggle} />
-            </div>
-            <div
-                className={`absolute top-20 right-0 h-[100%] w-[40%] bg-primary text-white flex flex-col 
-                    items-start p-6 transform ${toggle ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 sm:hidden`}
-            >
-                <ul className="list-none flex flex-col gap-4">
-                    {navLinks.map((nav) => (
-                        <Menus key={nav.id} title={nav.title} onClick={handleToggle} />
-                    ))}
-                </ul>
+
+            <div className="sm:hidden flex flex-1 justify-end items-center">
+                <img
+                    src={toggle ? "/icons/close.svg" : "/icons/menu.svg"}
+                    alt="menu"
+                    className="w-[28px] h-[28px] object-contain"
+                    onClick={() => setToggle(!toggle)}
+                />
+
+                <div
+                    className={`${!toggle ? "hidden" : "flex"
+                        } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+                >
+                    <ul className="list-none flex justify-end items-start flex-1 flex-col">
+                        {navLinks.map((nav, index) => (
+                            <li
+                                key={nav.id}
+                                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
+                                    } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                                onClick={() => setActive(nav.title)}
+                            >
+                                <a href={`#${nav.id}`}>{nav.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar
