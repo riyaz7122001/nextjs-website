@@ -18,8 +18,8 @@ export default function Home() {
       <div className={`bg-primary flex justify-center items-start px-6 sm:px-16`}>
         <div className={`xl:max-w-[1400px] w-full`}>
           <Stats />
-          {/* <Business />
-          <Billing />
+          <Business />
+          {/* <Billing />
           <CardDeal />
           <Testimonials />
           <Clients />
