@@ -28,7 +28,7 @@ export default Business
 
 const FeatureCard = ({ id, icon, title, content, index }: any) => {
     return (
-        <div className={`flex flex-row p-6 rounded-[20px]  ${index !== features.length - 1 ? 'mb-6' : 'mb-0'} feature-card `}>
+        <div className={`flex flex-row p-6 gap-x-2 rounded-[20px]  ${index !== features.length - 1 ? 'mb-6' : 'mb-0'} feature-card `}>
             <div className="w-[64px] h-[64px] rounded-full flex justify-center items-center bg-dimBlue">
                 <img key={id} src={icon} alt={`${title}`} className="w-[50%] h-[50%]" />
             </div>
