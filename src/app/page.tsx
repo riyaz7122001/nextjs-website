@@ -19,8 +19,8 @@ export default function Home() {
         <div className={`xl:max-w-[1400px] w-full`}>
           <Stats />
           <Business />
-          {/* <Billing />
-          <CardDeal />
+          <Billing />
+          {/* <CardDeal />
           <Testimonials />
           <Clients />
           <CallToAction />

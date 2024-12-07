@@ -4,7 +4,7 @@ import styles, { layout } from "@/styles/styles";
 
 const Business = () => {
     return (
-        <section id="features" className="flex md:flex-row flex-col sm:py-16 py-6">
+        <section id="features" className="flex md:flex-row flex-col sm:py-16 py-6 relative">
             <div className="flex flex-col flex-1 justify-center items-start">
                 <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-white
                     xs:leading-[76.8px] leading-[66.8px]">You do the business, <br className="sm:block hidden" />
