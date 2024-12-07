@@ -50,15 +50,15 @@ export const features = [
   },
   {
     id: "feature-2",
-    icon: "/Shield.svg",
+    icon: "/icons/Shield.svg",
     title: "100% Secured",
     content:
       "We take proactive steps make sure your information and transactions are secure.",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "/icons/balance.png",
+    icon: "/icons/Shield.svg",
+    title: "Balance Transfer",
     content:
       "A balance transfer credit card can save you a lot of money in interest charges.",
   },
