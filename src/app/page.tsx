@@ -20,8 +20,8 @@ export default function Home() {
           <Stats />
           <Business />
           <Billing />
-          {/* <CardDeal />
-          <Testimonials />
+          <CardDeal />
+          {/* <Testimonials />
           <Clients />
           <CallToAction />
           <Footer /> */}
