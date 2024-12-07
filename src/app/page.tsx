@@ -21,9 +21,9 @@ export default function Home() {
           <Business />
           <Billing />
           <CardDeal />
-          {/* <Testimonials />
           <Clients />
           <CallToAction />
+          {/* <Testimonials />
           <Footer /> */}
         </div>
       </div>
