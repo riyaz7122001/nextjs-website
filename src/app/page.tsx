@@ -23,8 +23,8 @@ export default function Home() {
           <CardDeal />
           <Clients />
           <CallToAction />
-          {/* <Testimonials />
-          <Footer /> */}
+          <Footer />
+          {/* <Testimonials /> */}
         </div>
       </div>
     </div>
