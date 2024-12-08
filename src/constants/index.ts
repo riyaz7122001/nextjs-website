@@ -1,8 +1,3 @@
-import airbnb from "@/public/icons/airbnb.png";
-import binance from "@/public/icons/binance.png";
-import coinbase from "@/public/icons/coinbase.png";
-import dropbox from "@/public/icons/dropbox.png";
-
 export const navLinks = [
   {
     id: "home",
@@ -127,24 +122,5 @@ export const footerLinks = [
         link: "https://www.hoobank.com/become-a-partner/",
       },
     ],
-  },
-];
-
-export const clients = [
-  {
-    id: "client-1",
-    logo: airbnb,
-  },
-  {
-    id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
   },
 ];
