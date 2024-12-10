@@ -1,4 +1,5 @@
 import styles from "@/styles/styles";
+import Image from "next/image";
 
 const GetStarted = () => (
     <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
@@ -7,7 +8,7 @@ const GetStarted = () => (
                 <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
                     <span className="text-gradient">Get</span>
                 </p>
-                <img src={"/icons/arrow-up.svg"} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
+                <Image src={"/icons/arrow-up.svg"} width={23} height={23} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
             </div>
 
             <p className="font-poppins font-medium text-[18px] leading-[23.4px]">

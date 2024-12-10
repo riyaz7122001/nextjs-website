@@ -1,10 +1,12 @@
 import styles, { layout } from "@/styles/styles"
+import img from "@/public/icons/bill.png"
+import Image from "next/image"
 
 const Billing = () => {
     return (
         <section id="product" className="flex md:flex-row flex-col-reverse sm:py-16 py-6 relative">
             <div className={layout.sectionImgReverse}>
-                <img src="/icons/bill.png" alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+                <Image src={img} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
             </div>
             <div className="absolute z-[3] w-[50%] h-[50%] -left-1/2 top-0 rounded-full white__gradient"></div>
             <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient"></div>
@@ -20,8 +22,21 @@ const Billing = () => {
                         commodi ipsum placeat inventore esse recusandae libero porro?
                     </p>
                     <div className="flex flex-row flex-wrap gap-8 sm:mt-10 mt-6">
-                        <img src="/icons/apple.svg" alt="google_play" className="w-[128px] h-[42px] object-contain cursor-pointer" />
-                        <img src="/icons/google.svg" alt="google_play" className="w-[128px] h-[42px] object-contain cursor-pointer" />
+                        <Image
+                            src="/icons/apple.svg"
+                            alt="apple_store"
+                            width={128}
+                            height={42}
+                            className="object-contain cursor-pointer"
+                        />
+                        <Image
+                            src="/icons/google.svg"
+                            alt="google_play"
+                            width={128}
+                            height={42}
+                            className="object-contain cursor-pointer"
+                        />
+
                     </div>
                 </div>
             </div>

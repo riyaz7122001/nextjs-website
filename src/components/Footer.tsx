@@ -1,35 +1,13 @@
 import { footerLinks } from "@/constants"
 import styles from "@/styles/styles"
-
-const socialMedia = [
-    {
-        id: "social-media-1",
-        icon: "/icons/instagram.svg",
-        link: "https://www.instagram.com/",
-    },
-    {
-        id: "social-media-2",
-        icon: "/icons/facebook.svg",
-        link: "https://www.facebook.com/",
-    },
-    {
-        id: "social-media-3",
-        icon: "/icons/twitter.svg",
-        link: "https://www.twitter.com/",
-    },
-    {
-        id: "social-media-4",
-        icon: "/icons/linkedin.svg",
-        link: "https://www.linkedin.com/",
-    },
-];
+import Image from "next/image";
 
 const Footer = () => {
     return (
         <footer className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
             <div className={`${styles.flexStart} md:flex-row flex-col mt-8 w-full`}>
                 <div className="flex flex-col flex-1 justify-start mr-10">
-                    <img src="/icons/logo.svg" alt="hoobank" className="w-[266px] h-[72px] object-contain" />
+                    <Image src="/icons/logo.svg" width={266} height={72} alt="hoobank" className="w-[266px] h-[72px] object-contain" />
                     <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>A new way to make the payments easy, reliable and secure.</p>
                 </div>
 
@@ -54,16 +32,16 @@ const Footer = () => {
                 </p>
                 <div className="flex flex-row mt-6">
                     <div className="flex flow-row md:mt-0 mt-6">
-                        <img src="/icons/instagram.svg" alt="1" className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
+                        <Image src="/icons/instagram.svg" alt="1" width={21} height={21} className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
                     </div>
                     <div className="flex flow-row md:mt-0 mt-6">
-                        <img src="/icons/facebook.svg" alt="1" className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
+                        <Image src="/icons/facebook.svg" alt="1" width={21} height={21} className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
                     </div>
                     <div className="flex flow-row md:mt-0 mt-6">
-                        <img src="/icons/twitter.svg" alt="1" className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
+                        <Image src="/icons/twitter.svg" alt="1" width={21} height={21} className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
                     </div>
                     <div className="flex flow-row md:mt-0 mt-6">
-                        <img src="/icons/linkedin.svg" alt="1" className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
+                        <Image src="/icons/linkedin.svg" alt="1" width={21} height={21} className="w-[21px] h-[21px] object-contain cursor-pointer mr-6" />
                     </div>
                 </div>
             </div>

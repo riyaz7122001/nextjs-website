@@ -1,7 +1,7 @@
 "use client";
+import Image from "next/image";
 import { navLinks } from "../constants";
 import { useState } from "react";
-import Menus from "./Menus";
 
 const Navbar = () => {
     const [active, setActive] = useState("Home");
@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
-            <img src={"/icons/logo.svg"} alt="hoobank" className="w-[124px] h-[32px]" />
+            <Image src={"/icons/logo.svg"} width={124} height={32} alt="hoobank" className="w-[124px] h-[32px]" />
 
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                 {navLinks.map((nav, index) => (
@@ -26,9 +26,11 @@ const Navbar = () => {
             </ul>
 
             <div className="sm:hidden flex flex-1 justify-end items-center">
-                <img
+                <Image
                     src={toggle ? "/icons/close.svg" : "/icons/menu.svg"}
                     alt="menu"
+                    width={28}
+                    height={28}
                     className="w-[28px] h-[28px] object-contain"
                     onClick={() => setToggle(!toggle)}
                 />
